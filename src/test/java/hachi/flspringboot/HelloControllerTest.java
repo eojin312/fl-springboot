@@ -27,5 +27,4 @@ public class HelloControllerTest {
                 .andExpect(content().string(hello));
 
     }
-
 }
