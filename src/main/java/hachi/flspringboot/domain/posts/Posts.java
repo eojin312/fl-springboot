@@ -32,4 +32,10 @@ public class Posts {
         this.content = content;
         this.author = author;
     }
+
+    //생성자로 주입받는 방식
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
