@@ -1,5 +1,6 @@
 package hachi.flspringboot.domain.posts;
 
+import hachi.flspringboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,7 +13,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity // 테이블과 링크될 클래스임을 알려줌
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id // 해당 PK 필드를 알려줌
     @GeneratedValue(strategy = GenerationType.IDENTITY) // PK 생성 규칙, spring boot 2.0 이후부터 GenerationType.IDENTITY 를 붙여야 auto_increment 가 됨

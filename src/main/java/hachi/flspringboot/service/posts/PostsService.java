@@ -9,6 +9,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * 트렌잭션 도메인 기능 간의 순서를 보장하는 service
+ */
 @RequiredArgsConstructor
 @Service
 public class PostsService {
@@ -23,7 +26,10 @@ public class PostsService {
         Posts posts = postsRepository.findById(id)
                 .orElseThrow(() -> new
                         IllegalArgumentException("해당 사용자가 없습니다. + id = " + id));
+
         posts.update(requestDto.getTitle(), requestDto.getContent());
+
+
         return id;
     }
 

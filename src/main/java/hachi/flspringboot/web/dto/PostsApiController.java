@@ -4,6 +4,9 @@ import hachi.flspringboot.service.posts.PostsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * API 요청을 받을 controller
+ */
 @RequiredArgsConstructor
 @RestController
 public class PostsApiController {
