@@ -4,6 +4,7 @@ import hachi.flspringboot.domain.posts.Posts;
 import hachi.flspringboot.domain.posts.PostsRepository;
 import hachi.flspringboot.web.dto.PostsSaveRequestDto;
 import hachi.flspringboot.web.dto.PostsUpdateRequestDto;
+import org.assertj.core.util.Lists;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -78,7 +79,7 @@ public class PostsApiControllerApiTest {
 
         HttpEntity<PostsUpdateRequestDto> requestEntity = new HttpEntity<>(requestDto);
 
-        ResponseEntity<Long> responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, Long.class);
+        ResponseEntity<Long> responseEntity = restTemplate.exchange(url, HttpMethod.PUT, requestEntity, Long.class);
         assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(responseEntity.getBody()).isGreaterThan(0L);
     }
