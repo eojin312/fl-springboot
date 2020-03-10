@@ -10,9 +10,8 @@ branches:
 cache:
   directories:
   - '$HOME/.m2/repository'
-  - '$HOME/.mvn'
 
-script: "./mvnw clean package"
+script: "mvn clean package"
 
 # CI 성공시 이메일로 알림
 notifications:
