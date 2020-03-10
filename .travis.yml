@@ -6,13 +6,13 @@ branches:
   only:
   - master
 
-# Travis CI 서버의 서버의 Home
+# Travis CI 서버의 Home
 cache:
   directories:
   - '$HOME/.m2/repository'
   - '$HOME/.mvn'
 
-script: "./mvn clean package
+script: "./mvn clean package"
 
 # CI 성공시 이메일로 알림
 notifications:
